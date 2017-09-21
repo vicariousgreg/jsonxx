@@ -63,7 +63,7 @@ enum Settings {
   Parser = Permissive,  // permissive or strict parsing
   UnquotedKeys = Disabled, // support of unquoted keys
   Assertions = Enabled,  // enabled or disabled assertions (these asserts work both in DEBUG and RELEASE builds)
-  Ordered = Enabled
+  OrderedKeys = Enabled
 };
 
 #ifdef _MSC_VER
@@ -73,7 +73,7 @@ enum Settings {
 inline bool parser_is_strict() { return Parser == Strict; }
 inline bool parser_is_permissive() { return Parser == Permissive; }
 inline bool unquoted_keys_are_enabled() { return UnquotedKeys == Enabled; }
-inline bool keys_are_ordered() { return Ordered == Enabled; }
+inline bool keys_are_ordered() { return OrderedKeys == Enabled; }
 #ifdef _MSC_VER
 #pragma warning(pop)
 #endif
